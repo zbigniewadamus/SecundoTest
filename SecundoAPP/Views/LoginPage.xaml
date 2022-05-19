@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecundoAPP.LoginPage">
+
+    <StackLayout>
+        <!-- Navbar -->
+        <FlexLayout AlignContent="Center" AlignItems="Center" JustifyContent="SpaceBetween" BackgroundColor="#EB5E00" Padding="5,10">
+            <Button Text="Menu" MinimumWidthRequest="10" BackgroundColor="#EB5E00" TextColor="White"/>
+            <Image Source="logo.png" Scale="0.8"/>
+            <Button Text="Log out"  BackgroundColor="#EB5E00" TextColor="White"/>
+        </FlexLayout>
+        
+        <!-- Login card -->
+        <Frame BorderColor="#c9c9c9"          
+               CornerRadius="10"
+               HasShadow="True"
+               Margin="30,30"
+               Padding="30,30"
+               BackgroundColor="#F9F9F9"
+        >
+            <StackLayout>
+                <Label Text="Sign In" FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Sign into your secundo. account" FontSize="Subtitle" HorizontalTextAlignment="Center" Margin="0,0,40,0" TextColor="Black"/>
+                <Label Text="Email" FontAttributes="Bold" TextColor="Black"/>
+                <Frame 
+                    Padding="5" 
+                    CornerRadius="10" 
+                    HasShadow="False" 
+                    BorderColor="Black">
+                    <Entry/>
+                </Frame>
+                <Label 
+                    Text="Password" 
+                    FontAttributes="Bold" 
+                    TextColor="Black"/>
+                <Frame 
+                    Padding="5" 
+                    CornerRadius="10" 
+                    HasShadow="False" 
+                    BorderColor="Black">
+                    <Entry IsPassword="True"/>
+                </Frame>
+                <Button 
+                    Text="Forgot my password" 
+                    BorderWidth="0" 
+                    BackgroundColor="#F9F9F9" 
+                    TextColor="#EB5e00" 
+                    TextTransform="None" 
+                    HorizontalOptions="End" 
+                    Command="{Binding ForgotPassword}"
+                    />
+                <Button 
+                    Text="Sign In" 
+                    BackgroundColor="Black" 
+                    TextColor="White" 
+                    CornerRadius="10" 
+                    TextTransform="None" 
+                    FontSize="Large" 
+                    VerticalOptions="Center" 
+                    Command="{Binding Login}" 
+                    />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
